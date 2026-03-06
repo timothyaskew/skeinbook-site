@@ -22,7 +22,7 @@ SkeinBook connects to the following services (only when the user explicitly opts
 | Service | Purpose | Data Sent |
 |---------|---------|-----------|
 | **Ravelry** | Sync the user's purchased pattern library | OAuth token (read-only access to the user's own library) |
-| **Etsy** | Import pattern purchases from Etsy (planned) | OAuth token (read-only access to the user's own purchases) |
+| **Etsy** | Helps users organize pattern PDFs they've purchased from Etsy. Paste any Etsy listing URL to automatically populate title, designer, and cover image. Full purchase history import coming soon. | OAuth token (read-only access to the user's own purchases and listing data) |
 | **Anthropic Claude** | AI extraction of pattern metadata from PDF text | Anonymized text snippets from the user's own PDFs (no filenames, no personal info) |
 
 No user data is ever sold, shared with third parties, or used for advertising.
@@ -36,7 +36,7 @@ SkeinBook is a **local-first** application:
 - Users can disconnect any service at any time and delete all synced data
 - No analytics, telemetry, or advertising SDKs are included
 - Crash reporting (via Sentry) is opt-in and scrubs all personally identifiable information before transmission
-- An optional shared metadata cache (Supabase) stores only **pattern metadata** (title, designer, yarn weight)  never file contents, usernames, or personal data
+- An optional shared metadata cache stores only **AI-extracted metadata from non-Ravelry pattern files** (title, designer, yarn weight). Ravelry data is never stored server-side — never file contents, usernames, or personal data
 
 ## Technology
 
@@ -44,6 +44,13 @@ SkeinBook is a **local-first** application:
 - Local database: [SQLite](https://sqlite.org/) via [Drizzle ORM](https://orm.drizzle.team/)
 - PDF rendering: [PDF.js](https://mozilla.github.io/pdf.js/)
 - OCR: [Tesseract.js](https://tesseract.projectnaptha.com/)
+
+## Roadmap
+
+- **Etsy purchase history import** — Automatically sync patterns purchased on Etsy
+- **Expanded craft support** — Sewing, quilting, embroidery, and other fiber arts pattern management
+- **Pattern notes & project tracking** — Attach notes, modifications, and project photos to any pattern
+- **Community pattern sharing** — Share curated collections with friends and knitting groups
 
 ## Status
 
