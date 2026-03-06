@@ -52,7 +52,6 @@ SkeinBook is a **local-first** application:
 - **Etsy purchase history import** — Automatically sync patterns purchased on Etsy
 - **Expanded craft support** — Sewing, quilting, embroidery, and other fiber arts pattern management
 - **Pattern notes & project tracking** — Attach notes, modifications, and project photos to any pattern
-- **Pattern sharing** — Share your SkeinBook library lists to Ravelry queues and notebooks
 
 ## Status
 
