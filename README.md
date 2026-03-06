@@ -23,7 +23,7 @@ SkeinBook connects to the following services (only when the user explicitly opts
 
 | Service | Purpose | Data Sent |
 |---------|---------|-----------|
-| **Ravelry** | Sync the user's purchased pattern library | OAuth token (read-only access to the user's own library) |
+| **Ravelry** | Sync the user's purchased pattern library and link directly to designer profiles, yarn pages, and pattern pages on Ravelry | OAuth token (read-only access to the user's own library) |
 | **Etsy** | Helps users organize pattern PDFs they've purchased from Etsy. Paste any Etsy listing URL to automatically populate title, designer, and cover image. | OAuth token (read-only access to the user's own purchases and listing data) |
 | **Anthropic Claude** | AI extraction of pattern metadata from PDF text | Anonymized text snippets from the user's own PDFs (no filenames, no personal info) |
 
