@@ -4,6 +4,8 @@
 
 SkeinBook is a native desktop application that helps fiber artists organize, search, and manage their knitting and crochet pattern collections. It runs on macOS and Windows.
 
+![SkeinBook pattern library](screenshot.png)
+
 ---
 
 ## What It Does
