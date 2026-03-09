@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Download — SkeinBook Beta</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧶</text></svg>" />
+  <style>
+    .thankyou {
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 5rem 1.5rem 3rem;
+    }
+    .thankyou h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .thankyou .version {
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+    }
+    .instructions {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      margin-bottom: 1.5rem;
+    }
+    .instructions h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .instructions ol {
+      padding-left: 1.25rem;
+    }
+    .instructions li {
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 0.5rem;
+    }
+    .instructions code {
+      background: var(--surface-2);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.85em;
+    }
+    .instructions strong { color: var(--text); }
+    .tab-bar {
+      display: flex;
+      gap: 0;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .tab-bar button {
+      padding: 0.6rem 1.25rem;
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: all 0.15s;
+    }
+    .tab-bar button.active {
+      color: var(--text);
+      border-bottom-color: var(--brand);
+    }
+    .tab-bar button:hover { color: var(--text); }
+    .tab-pane { display: none; }
+    .tab-pane.active { display: block; }
+    .privacy-note {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+    .what-new { margin-top: 2rem; }
+    .what-new h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.75rem; }
+    .what-new ul { list-style: disc; padding-left: 1.5rem; }
+    .what-new li { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.25rem; }
+    .back-link { display: inline-block; margin-bottom: 1.5rem; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <a href="/" class="nav-brand">
+        <span class="icon">🧶</span> SkeinBook
+      </a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="thankyou">
+    <a href="/" class="back-link">&larr; Back to home</a>
+    <h1>Thanks for testing! 🎉</h1>
+    <p class="version" id="versionLabel">Your download should start automatically.</p>
+
+    <!-- Platform tabs -->
+    <div class="tab-bar">
+      <button class="tab-btn active" data-tab="windows">🪟 Windows</button>
+      <button class="tab-btn" data-tab="mac">🍎 macOS</button>
+      <button class="tab-btn" data-tab="linux">🐧 Linux</button>
+    </div>
+
+    <!-- Windows instructions -->
+    <div class="tab-pane active" id="tab-windows">
+      <div class="instructions">
+        <h3>Windows Installation</h3>
+        <ol>
+          <li>Run <strong>SkeinBook Setup 0.1.0.exe</strong></li>
+          <li>Windows SmartScreen may warn you (we're not code-signed yet). Click <strong>"More info"</strong> → <strong>"Run anyway"</strong></li>
+          <li>Follow the installer — choose your install directory or accept the default</li>
+          <li>Launch SkeinBook from the desktop shortcut or Start menu</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- macOS instructions -->
+    <div class="tab-pane" id="tab-mac">
+      <div class="instructions">
+        <h3>macOS Installation</h3>
+        <ol>
+          <li>Unzip the downloaded <strong>.zip</strong> file</li>
+          <li>Drag <strong>SkeinBook.app</strong> to your <strong>Applications</strong> folder</li>
+          <li>Double-click to open. macOS may block it since we're not notarized yet</li>
+          <li>If blocked: right-click the app → <strong>Open</strong> → click <strong>Open</strong> in the dialog</li>
+          <li>Alternatively: System Settings → Privacy & Security → scroll down → click <strong>"Open Anyway"</strong></li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Linux instructions -->
+    <div class="tab-pane" id="tab-linux">
+      <div class="instructions">
+        <h3>Linux Installation</h3>
+        <ol>
+          <li>Make the AppImage executable: <code>chmod +x SkeinBook-*.AppImage</code></li>
+          <li>Run it: <code>./SkeinBook-*.AppImage</code></li>
+          <li>Or right-click → Properties → Permissions → check "Allow executing"</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Getting started -->
+    <div class="instructions" style="margin-top: 1.5rem;">
+      <h3>Getting Started</h3>
+      <ol>
+        <li><strong>Import PDFs</strong> — Click the import button or drag files into the window</li>
+        <li><strong>Add your Claude API key</strong> (optional) — Settings → paste your key → AI will extract metadata automatically</li>
+        <li><strong>Connect Ravelry</strong> (optional) — Settings → Ravelry → authorize to sync your library</li>
+        <li><strong>Search and browse</strong> — use the filter bar to find any pattern by keyword, designer, weight, or tags</li>
+      </ol>
+    </div>
+
+    <!-- What's in this build -->
+    <div class="what-new">
+      <h3>What's in v0.1.0-beta.1</h3>
+      <ul>
+        <li>Import PDFs individually or in bulk (1,400+ tested)</li>
+        <li>AI-powered metadata extraction (title, designer, yarn weight, gauge, needles)</li>
+        <li>Ravelry library sync with deduplication</li>
+        <li>Full-text search + filters (designer, weight, craft, tags)</li>
+        <li>Sort by title, date, designer, or yarn weight</li>
+        <li>Inline PDF viewer</li>
+        <li>Edit metadata, add tags, custom fields</li>
+        <li>Backup / restore (ZIP, CSV, JSON)</li>
+        <li>Right-click context menu + shift-click multi-select</li>
+      </ul>
+    </div>
+
+    <!-- Bug reporting -->
+    <div class="instructions" style="margin-top: 1.5rem;">
+      <h3>Found a bug?</h3>
+      <ol>
+        <li>Email <a href="mailto:feedback@skeinbook.app">feedback@skeinbook.app</a></li>
+        <li>Include: what you were doing, what happened, your OS, and a screenshot if possible</li>
+      </ol>
+    </div>
+
+    <p class="privacy-note">
+      We store only your email and download count. No tracking, no cookies, no third parties.
+      <br><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms</a>
+    </p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 SkeinBook</p>
+    </div>
+  </footer>
+
+  <script>
+    // Tab switching
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+      });
+    });
+
+    // Auto-select tab from URL param
+    const params = new URLSearchParams(window.location.search);
+    const platform = params.get('platform') || 'windows';
+    const version  = params.get('version');
+
+    if (version) {
+      document.getElementById('versionLabel').textContent =
+        `v${version} · Your download should start automatically.`;
+    }
+
+    // Map platform param to tab name
+    let tabName = 'windows';
+    if (platform.startsWith('mac')) tabName = 'mac';
+    else if (platform === 'linux') tabName = 'linux';
+
+    const targetBtn = document.querySelector(`.tab-btn[data-tab="${tabName}"]`);
+    if (targetBtn) targetBtn.click();
+  </script>
+
+</body>
+</html>

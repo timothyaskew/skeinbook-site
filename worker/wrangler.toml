@@ -1,0 +1,24 @@
+name = "skeinbook-beta-gate"
+main = "src/index.ts"
+compatibility_date = "2026-03-09"
+
+# ── Secrets (set via `wrangler secret put <NAME>`) ────────────────────
+# These are NOT stored in this file — they live in Cloudflare's encrypted
+# secret store. Listed here as documentation only.
+#
+# SUPABASE_URL          — e.g. https://xxxx.supabase.co
+# SUPABASE_SERVICE_KEY  — service_role key (NOT the anon key)
+# WASABI_ACCESS_KEY     — Wasabi IAM access key
+# WASABI_SECRET_KEY     — Wasabi IAM secret key
+# WASABI_BUCKET         — e.g. skeinbook-releases
+# WASABI_REGION         — e.g. us-east-1
+# WASABI_ENDPOINT       — e.g. https://s3.us-east-1.wasabisys.com
+
+[vars]
+# Non-secret environment variables can go here if needed
+
+# ── Routes ────────────────────────────────────────────────────────────
+# If using a custom domain, uncomment and adjust:
+# routes = [
+#   { pattern = "skeinbook.app/api/*", zone_name = "skeinbook.app" }
+# ]
