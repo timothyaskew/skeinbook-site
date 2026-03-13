@@ -15,7 +15,7 @@ SkeinBook is a native desktop application that helps fiber artists organize, sea
 - **Ravelry integration**  Sync your Ravelry library to see all your purchased patterns in one place, with direct links to designer profiles, yarn pages, and pattern pages on Ravelry
 - **Full-text search & smart filters**  Find any pattern instantly by title, designer, yarn weight, craft type, or keyword
 - **Backup & export**  Export your library as ZIP, CSV, or JSON; restore from backups on any machine
-- **Privacy-first**  Your patterns and data stay on your computer. No accounts required, no mandatory cloud storage, no tracking
+- **Privacy-first**  Your patterns and data stay on your computer. No mandatory cloud storage, no tracking
 
 ## API Integrations
 
